@@ -3,7 +3,6 @@ import { MyContext } from "./MyContext";
 export default function Point(props) {
     const {chosenPoint, setChosenPoint} = useContext(MyContext)
     const [border, setBorder] = useState("")
-    const [hidden, setHidden] = useState("")
     useEffect(() => {
         if(chosenPoint === props.number) setBorder("[#FDCE00]")
         else if(chosenPoint < props.number) setBorder("dark")
